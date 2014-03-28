@@ -1,0 +1,2273 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dev.Comm.Core</name>
+    </assembly>
+    <members>
+        <member name="T:Dev.Comm.DataStructure.CreateSequence">
+            <summary>
+              创建顺序的串
+            </summary>
+        </member>
+        <member name="M:Dev.Comm.DataStructure.CreateSequence.#ctor(System.Int32,System.String[])">
+            <summary>
+            </summary>
+            <param name="len"> 长度 </param>
+            <param name="seed"> 种子 </param>
+        </member>
+        <member name="M:Dev.Comm.DataStructure.CreateSequence.BeginCreate">
+            <summary>
+              开始创建
+            </summary>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.DataStructure.CreateSequence.CreateNo(System.Int32)">
+            <summary>
+            </summary>
+            <param name="position"> </param>
+        </member>
+        <member name="T:Dev.Comm.DataStructure.Node`1">
+            <summary>
+              结点
+            </summary>
+            <typeparam name="T"> </typeparam>
+        </member>
+        <member name="P:Dev.Comm.DataStructure.Node`1.Current">
+            <summary>
+              当前结点
+            </summary>
+        </member>
+        <member name="P:Dev.Comm.DataStructure.Node`1.Children">
+            <summary>
+              子结点
+            </summary>
+        </member>
+        <member name="T:Dev.Comm.DataStructure.TreeBuilder`1">
+            <summary>
+              创建树
+            </summary>
+            <typeparam name="T"> </typeparam>
+        </member>
+        <member name="M:Dev.Comm.DataStructure.TreeBuilder`1.Builder">
+            <summary>
+              开始解析
+            </summary>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.DataStructure.TreeBuilder`1.GetChild(System.Collections.Generic.IEnumerable{`0},`0)">
+            <summary>
+              取得子项目
+            </summary>
+            <param name="list"> </param>
+            <param name="node"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.DataStructure.TreeBuilder`1.GetRoot(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+              取得根项目
+            </summary>
+            <param name="list"> </param>
+            <returns> </returns>
+        </member>
+        <member name="T:Dev.Comm.Extensions.DictionaryExtension">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Dev.Comm.Extensions.DictionaryExtension.GetInt(System.Collections.IDictionary,System.String)">
+            <summary>
+            得到Int
+            </summary>
+            <param name="data"></param>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dev.Comm.Extensions.DictionaryExtension.Get``1(System.Collections.IDictionary,System.Object,``0)">
+            <summary>
+            取得任意类型
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="data"></param>
+            <param name="key"></param>
+            <param name="defValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dev.Comm.Extensions.DictionaryExtension.GetDecimal(System.Collections.IDictionary,System.String)">
+            <summary>
+            取得Decimal类型
+            </summary>
+            <param name="data"></param>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dev.Comm.Extensions.DictionaryExtension.GetString(System.Collections.IDictionary,System.String)">
+            <summary>
+            得到String
+            </summary>
+            <param name="data"></param>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dev.Comm.Extensions.DictionaryExtension.GetBool(System.Collections.IDictionary,System.String,System.String)">
+            <summary>
+            得到Bool
+            </summary>
+            <param name="data"></param>
+            <param name="key"></param>
+            <param name="compare"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dev.Comm.Extensions.DictionaryExtension.GetDouble(System.Collections.IDictionary,System.String)">
+            <summary>
+            得到Double
+            </summary>
+            <param name="data"></param>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dev.Comm.Extensions.DictionaryExtension.GetHashtable(System.Collections.IDictionary,System.String)">
+            <summary>
+            得到Hashtable
+            </summary>
+            <param name="data"></param>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Dev.Comm.Extensions.ListExtensions">
+            <summary>
+            From:http://stackoverflow.com/questions/222598/how-do-i-clone-a-generic-list-in-c
+            </summary>
+        </member>
+        <member name="M:Dev.Comm.Extensions.ListExtensions.Clone``1(System.Collections.Generic.IList{``0})">
+            <summary>
+            对列表进行克隆
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="listToClone"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Dev.Comm.Extensions.StringExtensions">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Dev.Comm.IO.FileContentWatcher">
+            <summary>
+              文件内容监视
+            </summary>
+        </member>
+        <member name="M:Dev.Comm.IO.FileContentWatcher.GetFileCurrentContent(System.String)">
+            <summary>
+              读取最新文件内容，只管读就是了，FileWatch会自动加载最新的文件
+            </summary>
+            <param name="file"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.IO.FileContentWatcher.GetFileCurrentContent(System.String,System.Func{System.String,System.String},System.Func{System.String,System.String})">
+            <summary>
+              读取最新文件内容，只管读就是了，FileWatch会自动加载最新的文件，使用读取处理，及读取后处理方式
+            </summary>
+            <param name="file"> </param>
+            <param name="preHander"> </param>
+            <param name="afterHander"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.IO.FileContentWatcher.GetFileCurrentContent(System.String,System.Text.Encoding,System.Func{System.String,System.String},System.Func{System.String,System.String})">
+            <summary>
+              读取最新文件内容，只管读就是了，FileWatch会自动加载最新的文件
+            </summary>
+            <param name="file"> </param>
+            <param name="encoding"> </param>
+            <param name="afterHander"> </param>
+            <param name="preHander"> </param>
+            <returns> </returns>
+            <exception cref="T:System.IO.FileNotFoundException"></exception>
+            <exception cref="T:System.NullReferenceException"></exception>
+        </member>
+        <member name="T:Dev.Comm.IO.FileWatcher">
+            <summary>
+              文件监控
+            </summary>
+        </member>
+        <member name="M:Dev.Comm.IO.FileWatcher.#ctor(System.String)">
+            <summary>
+            </summary>
+            <param name="file"> </param>
+        </member>
+        <member name="M:Dev.Comm.IO.FileWatcher.AddWatch">
+            <summary>
+            </summary>
+            <exception cref="T:System.IO.FileNotFoundException"></exception>
+        </member>
+        <member name="M:Dev.Comm.IO.FileWatcher.RemoveWatch(System.String)">
+            <summary>
+              移除Watch
+            </summary>
+            <param name="file"> </param>
+        </member>
+        <member name="P:Dev.Comm.IO.FileWatcher.OnChanged">
+            <summary>
+              变更后
+            </summary>
+        </member>
+        <member name="P:Dev.Comm.IO.FileWatcher.OnCreated">
+            <summary>
+              创建
+            </summary>
+        </member>
+        <member name="P:Dev.Comm.IO.FileWatcher.OnDeleted">
+            <summary>
+              删除
+            </summary>
+        </member>
+        <member name="P:Dev.Comm.IO.FileWatcher.OnRenamed">
+            <summary>
+              重命名
+            </summary>
+        </member>
+        <member name="T:Dev.Comm.IO.FileWatchStorageProvider">
+            <summary>
+              文件存储，默认内在中存放，以后可以扩展其它方式
+            </summary>
+        </member>
+        <member name="P:Dev.Comm.IO.FileWatchStorageProvider.Provider">
+            <summary>
+              存储提供者
+            </summary>
+        </member>
+        <member name="T:Dev.Comm.IO.IFileWatchStorage">
+            <summary>
+              用于监控的文件
+            </summary>
+        </member>
+        <member name="M:Dev.Comm.IO.IFileWatchStorage.AddOrUpdate(System.String,System.Byte[])">
+            <summary>
+              增加或更新
+            </summary>
+            <param name="file"> </param>
+            <param name="content"> </param>
+        </member>
+        <member name="M:Dev.Comm.IO.IFileWatchStorage.Remove(System.String)">
+            <summary>
+              移除
+            </summary>
+            <param name="file"> </param>
+        </member>
+        <member name="M:Dev.Comm.IO.IFileWatchStorage.Get(System.String)">
+            <summary>
+              取得文件
+            </summary>
+            <param name="file"> </param>
+            <returns> </returns>
+        </member>
+        <member name="T:Dev.Comm.IO.MemFileWatchStorage">
+            <summary>
+              存放在内存中的方式
+            </summary>
+        </member>
+        <member name="M:Dev.Comm.IO.MemFileWatchStorage.AddOrUpdate(System.String,System.Byte[])">
+            <summary>
+              增加或更新
+            </summary>
+            <param name="file"> </param>
+            <param name="content"> </param>
+        </member>
+        <member name="M:Dev.Comm.IO.MemFileWatchStorage.Remove(System.String)">
+            <summary>
+              移除
+            </summary>
+            <param name="file"> </param>
+        </member>
+        <member name="M:Dev.Comm.IO.MemFileWatchStorage.Get(System.String)">
+            <summary>
+              取得文件
+            </summary>
+            <param name="file"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.IO.IOUtility.EnsureDirectoryExists(System.String)">
+            <summary>
+              Ensures the directory exists.
+            </summary>
+        </member>
+        <member name="M:Dev.Comm.IO.IOUtility.ReadAsString(System.String)">
+            <summary>
+              读文件到string
+            </summary>
+            <param name="filePath"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.IO.IOUtility.ReadAsBypeArray(System.String)">
+            <summary>
+              读文件到 byteArray
+            </summary>
+            <param name="filePath"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.IO.IOUtility.SaveStringToFile(System.String,System.String)">
+            <summary>
+              Saves to file.
+            </summary>
+            <param name="filePath"> The file path. </param>
+            <param name="body"> The body. </param>
+        </member>
+        <member name="T:Dev.Comm.IO.StreamHelper">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Dev.Comm.IO.StreamHelper.StreamToBegin(System.IO.Stream)">
+            <summary>
+              to begin
+            </summary>
+            <param name="stream"> </param>
+        </member>
+        <member name="M:Dev.Comm.IO.StreamHelper.ReadToByteArray(System.IO.Stream)">
+            <summary>
+              把流读到Bype【】
+            </summary>
+            <param name="stream"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.IO.StreamHelper.ReadString(System.IO.Stream)">
+            <summary>
+              Reads the string.
+            </summary>
+            <param name="src"> The SRC. </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.IO.StreamHelper.ReadString(System.IO.Stream,System.Text.Encoding)">
+            <summary>
+              Reads the string.
+            </summary>
+            <param name="src"> The SRC. </param>
+            <param name="encoding"> The encoding. </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.IO.StreamHelper.CopyTo(System.IO.Stream,System.IO.Stream)">
+            <summary>
+              Copies to.
+            </summary>
+            <param name="src"> The SRC. </param>
+            <param name="dest"> The dest. </param>
+        </member>
+        <member name="M:Dev.Comm.IO.StreamHelper.CopyFrom(System.IO.Stream)">
+            <summary>
+              Copies to.
+            </summary>
+            <param name="src"> The SRC. </param>
+            <param name="dest"> The dest. </param>
+        </member>
+        <member name="M:Dev.Comm.IO.StreamHelper.SaveAs(System.IO.Stream,System.String)">
+            <summary>
+              Saves as.
+            </summary>
+            <param name="stream"> The stream. </param>
+            <param name="fileName"> Name of the file. </param>
+        </member>
+        <member name="M:Dev.Comm.IO.StreamHelper.SaveAs(System.IO.Stream,System.String,System.Boolean)">
+            <summary>
+              Saves as.
+            </summary>
+            <param name="stream"> The stream. </param>
+            <param name="fileName"> Name of the file. </param>
+            <param name="isOverwrite"> if set to <c>true</c> [is overwrite]. </param>
+        </member>
+        <member name="M:Dev.Comm.IO.StreamHelper.SaveAs(System.Byte[],System.String,System.Boolean)">
+            <summary>
+              Saves as.
+            </summary>
+            <param name="data"> The data. </param>
+            <param name="fileName"> Name of the file. </param>
+            <param name="isOverwrite"> if set to <c>true</c> [is overwrite]. </param>
+            <returns> saved file absolute path </returns>
+        </member>
+        <member name="M:Dev.Comm.IO.StreamHelper.WriteString(System.IO.Stream,System.String,System.Text.Encoding)">
+            <summary>
+              Writes the string.
+            </summary>
+            <param name="src"> The SRC. </param>
+            <param name="s"> The s. </param>
+        </member>
+        <member name="T:Dev.Comm.ObjectDynamicConvert">
+            <summary>
+              http://stackoverflow.com/questions/7717281/expandoobject-to-static-object-and-back-again-spanning-the-two-domains
+            </summary>
+        </member>
+        <member name="T:Dev.Comm.Php.PhpUtils">
+            <summary>
+            php C# 方法
+            </summary>
+        </member>
+        <member name="M:Dev.Comm.Php.PhpUtils.PhpTimeNow">
+            <summary>
+            计算Php格式的当前时间
+            </summary>
+            <returns>Php格式的时间</returns>
+        </member>
+        <member name="M:Dev.Comm.Php.PhpUtils.PhpTimeToDateTime(System.Int64)">
+            <summary>
+            PhpTime转DataTime
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dev.Comm.Php.PhpUtils.DateTimeToPhpTime(System.DateTime)">
+            <summary>
+            DataTime转PhpTime
+            </summary>
+            <param name="datetime">时间</param>
+            <returns></returns>
+        </member>
+        <member name="T:Dev.Comm.ReadWriteAppSettings">
+             <summary> 
+            Summary description for ReadWriteConfig. 
+            .config appsetting readwrite  
+            added by zbw911
+             </summary> 
+        </member>
+        <member name="M:Dev.Comm.ReadWriteAppSettings.GetValue(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+            <exception cref="T:System.InvalidOperationException"></exception>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:Dev.Comm.ReadWriteAppSettings.SetValue(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+            <returns></returns>
+            <exception cref="T:System.InvalidOperationException"></exception>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:Dev.Comm.ReadWriteAppSettings.RemoveElement(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="elementKey"></param>
+            <returns></returns>
+            <exception cref="T:System.InvalidOperationException"></exception>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:Dev.Comm.ReadWriteAppSettings.ModifyElement(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="elementKey"></param>
+            <param name="elementValue"></param>
+            <returns></returns>
+            <exception cref="T:System.InvalidOperationException"></exception>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:Dev.Comm.ReadWriteAppSettings.LoadConfigDoc(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="docName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Dev.Comm.Runtime.Serialization.DataContractSerializationHelper">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Dev.Comm.Runtime.PHPSerializationLibrary.Serializer">
+            <summary>
+            Serializer Class.
+            </summary>
+        </member>
+        <member name="T:Dev.Comm.Utils.AsmUtil">
+            <summary>
+            程序集方法
+            </summary>
+        </member>
+        <member name="M:Dev.Comm.Utils.AsmUtil.GetAssemblyFromCurrentDomain(System.String,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="assemblyNameOrPath"></param>
+            <param name="isLoadAsmPath">是否从绝对路径中取</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.AsmUtil.GetAssemblyFromCurrentDomain(System.String)">
+            <summary>
+            根据 AssemblyName 取得应用程序集 ，
+            </summary>
+            <param name="assemblyNameOrPath">程序名或路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.AsmUtil.InvokeMethod(System.Func{System.Type,System.Reflection.MethodInfo},System.Object[],System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="filter"></param>
+            <param name="aParam"></param>
+            <param name="aInstance"></param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:Dev.Comm.Utils.AsmUtil.InvokeMethod(System.String,System.Object[],System.Object)">
+            <summary>
+            执行方法 
+            </summary>
+            <param name="aName"></param>
+            <param name="aParam"></param>
+            <param name="aInstance"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.AsmUtil.InvokeMethod(System.String,System.String,System.String,System.Object[],System.Object[],System.Object@)">
+            <summary>
+              执行某个方法
+            </summary>
+            <param name="aAsmName"> </param>
+            <param name="aClassName"> </param>
+            <param name="aMethodName"> </param>
+            <param name="aConstructorParam"> </param>
+            <param name="aMethodParam"> </param>
+            <param name="aInstance"> </param>
+            <returns> </returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:Dev.Comm.Utils.AsmUtil.GetPropertyValue(System.Object,System.String,System.Object[])">
+            <summary>
+              取得属性值
+            </summary>
+            <param name="obj"> </param>
+            <param name="propertyName"> </param>
+            <param name="index"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.AsmUtil.ExistPropertyName(System.Object,System.String)">
+            <summary>
+              属性是否存在
+            </summary>
+            <param name="obj"> </param>
+            <param name="propertyName"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.AsmUtil.SetPropertyValue(System.Object,System.String,System.Object,System.Object[])">
+            <summary>
+              设置属性值
+            </summary>
+            <param name="obj"> </param>
+            <param name="propertyName"> </param>
+            <param name="value"> </param>
+            <param name="index"> </param>
+        </member>
+        <member name="M:Dev.Comm.Utils.AsmUtil.SetPropertyValue(System.Object,System.String,System.Object)">
+            <summary>
+            设置属性值
+            </summary>
+            <param name="obj"></param>
+            <param name="propertyName"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:Dev.Comm.Utils.AsmUtil.GetMethodParameterInfo">
+            <summary>
+              取得参数信息
+            </summary>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.AsmUtil.GetMethodParamNames">
+            <summary>
+            </summary>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.AsmUtil.GetMethodParamNamesByFormat(System.String,System.String)">
+            <summary>
+              取得格式化后的参数列表
+            </summary>
+            <param name="methodNamefromat"> </param>
+            <param name="paramFormat"> </param>
+            <returns> </returns>
+        </member>
+        <member name="T:Dev.Comm.Utils.ChineseCode">
+            <summary>
+              中文方法
+            </summary>
+        </member>
+        <member name="M:Dev.Comm.Utils.ChineseCode.IsChineseLetter(System.Char)">
+            <summary>
+              是否是中文字符
+            </summary>
+            <param name="input"> </param>
+            <param name="index"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.ChineseCode.IsChineseLetter(System.String,System.Int32)">
+            <summary>
+              是否是中文字符
+            </summary>
+            <param name="input"> </param>
+            <param name="index"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.ChineseCode.IsChina(System.String)">
+            <summary>
+            </summary>
+            <param name="CString"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.ChineseCode.WordsIScn(System.String)">
+            <summary>
+              判断句子中是否含有中文     宁夏大学 张冬 zd4004.blog.163.com
+            </summary>
+            <param> 字符串 </param>
+        </member>
+        <member name="M:Dev.Comm.Utils.ChineseCode.IsOnlyContainsChinese(System.String)">
+            <summary>
+              给定一个字符串，判断其是否只包含有汉字
+            </summary>
+            <param name="testStr"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.ChineseCode.IsGBCode(System.String)">
+            <summary>
+              判断一个word是否为GB2312编码的汉字
+            </summary>
+            <param name="word"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.ChineseCode.IsGBKCode(System.String)">
+            <summary>
+              判断一个word是否为GBK编码的汉字
+            </summary>
+            <param name="word"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.ChineseCode.IsBig5Code(System.String)">
+            <summary>
+              判断一个word是否为Big5编码的汉字
+            </summary>
+            <param name="word"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.ChineseCode.GetGbkX(System.String)">
+            <summary>
+              取得汉字拼音首字母
+            </summary>
+            <param name="str"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.ChineseCode.GetChineseSpell(System.String)">
+            <summary>
+              获得一个字符串的汉语拼音码
+            </summary>
+            <param name="strText"> 字符串 </param>
+            <returns> 汉语拼音码,该字符串只包含大写的英文字母 </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.ChineseCode.getCash(System.Decimal)">
+            <summary>
+              字符串替换方法，另外一种是以 4 个数字为基础的递归方法
+              Create By HJ 2007-10-21
+            </summary>
+            <param name="moneyNum"> </param>
+            <returns> </returns>
+        </member>
+        <member name="T:Dev.Comm.Utils.ChineseToBopomofo">
+            <summary>
+            功能:      汉字转拼音静态类,包括功能全拼和声母，方法全部是静态的,不能区分多音字,只完全支持GB2312-80汉字库
+            完成日期:  2009-04-17
+            作者:      adair
+            </summary>
+        </member>
+        <member name="M:Dev.Comm.Utils.ChineseToBopomofo.IndexCode(System.String)">
+            <summary>
+            获取汉字的首字母
+            </summary>
+            <param name="IndexTxt">汉字</param>
+            <returns>汉字的首字母</returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.ChineseToBopomofo.GetOneIndex(System.String)">
+            <summary>
+            单个汉字
+            </summary>
+            <param name="OneIndexTxt">汉字</param>
+            <returns>首拼</returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.ChineseToBopomofo.GetX(System.Int32)">
+            <summary>
+            根据区位得到首字母
+            </summary>
+            <param name="GBCode">区位</param>
+            <returns>首字母</returns>
+        </member>
+        <member name="F:Dev.Comm.Utils.ChineseToBopomofo.pyValue">
+            <summary>
+            汉字的机内码数组
+            </summary>
+        </member>
+        <member name="F:Dev.Comm.Utils.ChineseToBopomofo.pyName">
+            <summary>
+            机内码对应的拼音数组
+            </summary>
+        </member>
+        <member name="F:Dev.Comm.Utils.ChineseToBopomofo.otherChinese">
+            <summary>
+            二级汉字数组
+            </summary>
+        </member>
+        <member name="F:Dev.Comm.Utils.ChineseToBopomofo.otherPinYin">
+            <summary>
+            二级汉字对应拼音数组
+            </summary>
+        </member>
+        <member name="F:Dev.Comm.Utils.ChineseToBopomofo.referenceChinese">
+            <summary>
+            用作比较的汉字列.
+            <remarks>
+            实现流程:
+            1.这些汉字是按a~z拼音排序.且每个汉字都是以a~z为声母发音的第一个汉字.即首界限汉字
+            </remarks>
+            </summary>
+        </member>
+        <member name="F:Dev.Comm.Utils.ChineseToBopomofo.pinYinArray">
+            <summary>
+            referenceChinese数组中汉字发音的声母
+            </summary>
+        </member>
+        <member name="M:Dev.Comm.Utils.ChineseToBopomofo.ConvertToBopomofo(System.String)">
+            <summary>
+            把汉字转换成拼音(全拼)
+            </summary>
+            <param name="hzString">汉字字符串</param>
+            <returns>转换后的拼音(全拼)字符串</returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.ChineseToBopomofo.ConvertWithBlank(System.String)">
+            <summary>
+            把汉字转换成拼音(全拼)
+            </summary>
+            <param name="hzString">汉字字符串</param>
+            <returns>转换后的拼音(全拼)字符串</returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.ChineseToBopomofo.ConvertWithSplitChar(System.String,System.Char)">
+            <summary>
+            把汉字转换成拼音(全拼)
+            </summary>
+            <param name="hzString">汉字字符串</param>
+            <returns>转换后的拼音(全拼)字符串</returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.ChineseToBopomofo.GetFirstPinYin(System.String)">
+            <summary>
+            获取字符串中各汉字的声母
+            </summary>
+            <param name="hzString">要解析成声母的包含汉字的字符串</param>
+            <returns>汉字拼音声母</returns>
+        </member>
+        <member name="T:Dev.Comm.ValidateCode">
+            <summary>
+              生成验证码， from another project , added by zbw911
+            </summary>
+        </member>
+        <member name="M:Dev.Comm.ValidateCode.CreateValidateCode(System.Int32)">
+            <summary>
+              生成验证码
+            </summary>
+            <param name="length"> 指定验证码的长度 </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.ValidateCode.CreateValidateCode(System.Int32,System.Int32)">
+            <summary>
+              生成随机字符码
+            </summary>
+            <param name="codeLen"> 字符串总长度 </param>
+            <param name="zhCharsCount"> 中文字符个数 </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.ValidateCode.CreateValidateGraphic(System.String)">
+            <summary>
+              创建验证码的图片
+            </summary>
+            <param name="validateCode"> 验证码 </param>
+        </member>
+        <member name="M:Dev.Comm.ValidateCode.TwistImage(System.Drawing.Bitmap,System.Boolean,System.Double,System.Double)">
+            <summary>
+              正弦曲线Wave扭曲图片（Edit By 51aspx.com）
+            </summary>
+            <param name="srcBmp"> 图片路径 </param>
+            <param name="bXDir"> 如果扭曲则选择为True </param>
+            <param name="nMultValue"> 波形的幅度倍数，越大扭曲的程度越高，一般为3 </param>
+            <param name="dPhase"> 波形的起始相位，取值区间[0-2*PI) </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.ValidateCode.GetImageWidth(System.Int32)">
+            <summary>
+              得到验证码图片的长度
+            </summary>
+            <param name="validateNumLength"> 验证码的长度 </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.ValidateCode.GetImageHeight">
+            <summary>
+              得到验证码的高度
+            </summary>
+            <returns> </returns>
+        </member>
+        <member name="T:Dev.Comm.AssemblyManager">
+            <summary>
+              程序集管理
+            </summary>
+        </member>
+        <member name="M:Dev.Comm.AssemblyManager.LoadAllAssemblys">
+            <summary>
+              取得所有与当前域相关的 Assembly
+            </summary>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.AssemblyManager.CompareAssembly(System.Reflection.Assembly,System.String)">
+            <summary>
+              比较程序集
+            </summary>
+            <param name="assembly"> </param>
+            <param name="assemblyName"> </param>
+            <returns> </returns>
+        </member>
+        <member name="T:Dev.Comm.AssemblyManager.ActivationManager">
+            <summary>
+            copy from:https://github.com/davidebbo/WebActivator/blob/master/WebActivator/ActivationManager.cs
+            </summary>
+        </member>
+        <member name="T:Dev.Comm.Utils.FtpUtil">
+            <summary>
+                General, easy-to-use FTP class.
+            http://www.blackbeltcoder.com/Articles/client/an-ftpclient-class-and-winform-control
+            
+            </summary>
+        </member>
+        <!-- 对于成员“M:Dev.Comm.Utils.FtpUtil.ChangeDirectory(System.String)”忽略有格式错误的 XML 注释 -->
+        <member name="M:Dev.Comm.Utils.FtpUtil.CreateDirectory(System.String)">
+            <summary>
+                Creates the specified directory. This method will create multiple levels of
+                subdirectories as needed.
+            </summary>
+            <param name="directory">Directory to create. May be relative or absolute.</param>
+        </member>
+        <member name="M:Dev.Comm.Utils.FtpUtil.DeleteDirectory(System.String)">
+            <summary>
+                Deletes the specified directory. The directory should be empty.
+            </summary>
+            <param name="files">Directory to delete.</param>
+        </member>
+        <member name="M:Dev.Comm.Utils.FtpUtil.DeleteFiles(System.String[])">
+            <summary>
+                Deletes the given list of files from the current working directory.
+            </summary>
+            <param name="files">List of files to delete.</param>
+        </member>
+        <member name="M:Dev.Comm.Utils.FtpUtil.DirectoryExists(System.String)">
+            <summary>
+                Indicates if the specified directory exists. This function returns false
+                if a filename existing with the given name.
+            </summary>
+            <param name="directory">Directory to test. May be relative or absolute.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.FtpUtil.DownloadFile(System.String,System.String)">
+            <summary>
+            下载文件
+            </summary>
+            <param name="ftpFile"></param>
+            <param name="file"></param>
+        </member>
+        <member name="M:Dev.Comm.Utils.FtpUtil.DownloadFileStream(System.String)">
+            <summary>
+            下载流
+            </summary>
+            <param name="ftpFile"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.FtpUtil.DownloadFileBytes(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="ftpFile"></param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:Dev.Comm.Utils.FtpUtil.ListDirectory">
+            <summary>
+                Returns a directory listing of the current working directory.
+            </summary>
+        </member>
+        <member name="M:Dev.Comm.Utils.FtpUtil.UploadFiles(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="fileName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.FtpUtil.UploadFiles(System.String,System.IO.Stream)">
+            <summary>
+            </summary>
+            <param name="ftpFileName"></param>
+            <param name="stream"></param>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:Dev.Comm.Utils.FtpUtil.UploadFiles(System.String,System.Byte[])">
+            <summary>
+                使用Byte
+            </summary>
+            <param name="ftpFileName"></param>
+            <param name="filebytes"></param>
+        </member>
+        <member name="M:Dev.Comm.Utils.FtpUtil.CutSubstringWithTrim(System.String@,System.Char,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="s"></param>
+            <param name="c"></param>
+            <param name="startIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.FtpUtil.GetRequest">
+            <summary>
+            Constructs an FTP web request
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.FtpUtil.GetRequest(System.String)">
+            <summary>
+             Constructs an FTP web request with the given filename
+            </summary>
+            <param name="filename"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.FtpUtil.GuessDirectoryFormat(System.String[])">
+            <summary>
+             Attempts to determine the directory format.
+            </summary>
+            <param name="lines"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Dev.Comm.Utils.FtpUtil.Host">
+            <summary>
+                Gets or sets the current FTP domain and optional directory
+            </summary>
+        </member>
+        <member name="P:Dev.Comm.Utils.FtpUtil.IsRootDirectory">
+            <summary>
+                Indicates if the current directory is the
+                root directory.
+            </summary>
+        </member>
+        <member name="P:Dev.Comm.Utils.FtpUtil.Password">
+            <summary>
+                Gets or sets the login password.
+            </summary>
+        </member>
+        <member name="P:Dev.Comm.Utils.FtpUtil.Username">
+            <summary>
+                Gets or sets the login username.
+            </summary>
+        </member>
+        <member name="T:Dev.Comm.Utils.FtpUtil.FtpDirectory">
+            <summary>
+                Helper class for managing current FTP directory.
+            </summary>
+        </member>
+        <member name="M:Dev.Comm.Utils.FtpUtil.FtpDirectory.ToString">
+            <summary>
+                Returns the domain and current directory as a URL
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.FtpUtil.FtpDirectory.ApplyDirectory(System.String)">
+            <summary>
+                Applies the given directory to the current directory and returns the
+                result.
+                If directory starts with "/", it replaces all of the current directory.
+                If directory is "..", the top-most subdirectory is removed from
+                the current directory.
+            </summary>
+            <param name="directory">The directory to apply</param>
+        </member>
+        <member name="M:Dev.Comm.Utils.FtpUtil.FtpDirectory.GetUrl">
+            <summary>
+                Returns the domain and current directory as a URL.
+            </summary>
+        </member>
+        <member name="M:Dev.Comm.Utils.FtpUtil.FtpDirectory.GetUrl(System.String)">
+            <summary>
+                Returns the domain and specified directory as a URL.
+            </summary>
+            <param name="directory">
+                Partial directory or filename applied to the
+                current working directory.
+            </param>
+        </member>
+        <member name="M:Dev.Comm.Utils.FtpUtil.FtpDirectory.SetUrl(System.String)">
+            <summary>
+                Sets the domain and current directory from a URL.
+            </summary>
+            <param name="url">URL to set to</param>
+        </member>
+        <member name="P:Dev.Comm.Utils.FtpUtil.FtpDirectory.CurrentDirectory">
+            <summary>
+                Gets or sets the current FTP directory.
+            </summary>
+        </member>
+        <member name="P:Dev.Comm.Utils.FtpUtil.FtpDirectory.IsRootDirectory">
+            <summary>
+                Determines if the current directory is the root directory.
+            </summary>
+        </member>
+        <member name="M:Dev.Comm.Utils.DateUtil.GetLastDateForMonth(System.DateTime,System.DateTime@)">
+            <summary>
+              取得某月的最后一天
+              方法一：使用算出該月多少天，年+月+加上多少天即得，舉例取今天這個月的最后一天
+            </summary>
+            <param name="DtStart"> </param>
+            <param name="DtEnd"> </param>
+        </member>
+        <member name="M:Dev.Comm.Utils.DateUtil.GetLastDateForMonthEx(System.DateTime,System.DateTime@)">
+            <summary>
+              取得某月的最后一天
+              方法二：取出下月的第一天減去一天便是這個月的最后一天
+            </summary>
+            <param name="DtStart"> </param>
+            <param name="DtEnd"> </param>
+        </member>
+        <member name="M:Dev.Comm.Utils.DateUtil.DateDiff(System.String,System.DateTime,System.DateTime)">
+            <summary>
+              获取时间差
+            </summary>
+            <param name="datepart"> yy表示相差的年，mm表示相差的月，dd表示相差的天，hh表示相差的小时，mi表示相差的分，ss表示相差的秒 </param>
+            <param name="startdate"> </param>
+            <param name="enddate"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.DateUtil.ToUnixTimeStamp(System.DateTime)">
+            <summary>
+              将系统时间转换成UNIX时间戳
+            </summary>
+            <param name="Date"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.DateUtil.GetUnixTimeStamp(System.String)">
+            <summary>
+              将UNIX时间戳转换成系统时间
+            </summary>
+            <param name="timeStamp"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.DateUtil.my_date_format2(System.DateTime,System.String)">
+            <summary>
+              时间格式化 added by zbw911
+            </summary>
+            <param name="dateTime"> </param>
+            <param name="format"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.DateUtil.my_date_format(System.DateTime,System.String)">
+            <summary>
+              常用时间格式化
+            </summary>
+            <param name="timestamp"> </param>
+            <param name="format"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.DateUtil.UtcToLocal(System.DateTime)">
+            <summary>
+              将UTC 时间 转化为本地化时间
+            </summary>
+            <param name="utcDate"> </param>
+            <returns> </returns>
+        </member>
+        <member name="T:Dev.Comm.EnumHelper">
+            <summary>
+              枚举类型帮助方法
+              added by zbw911
+            </summary>
+        </member>
+        <member name="M:Dev.Comm.GlobalExtensions.Shorten(System.String,System.Int32,System.String)">
+            <summary>
+              截断字符串
+            </summary>
+            <param name="str"> </param>
+            <param name="toLength"> </param>
+            <param name="cutOffReplacement"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.GlobalExtensions.TakePage``1(System.Collections.Generic.IEnumerable{``0},System.Int32,System.Int32)">
+            <summary>
+              分页
+            </summary>
+            <typeparam name="T"> </typeparam>
+            <param name="items"> </param>
+            <param name="page"> </param>
+            <param name="pageSize"> </param>
+            <returns> </returns>
+        </member>
+        <member name="T:Dev.Comm.Utils.DictionaryUtil">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Dev.Comm.Utils.DictionaryUtil.StringArrayToDic(System.String[])">
+            <summary>
+            将返回的参数转化为Dic类型
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.DictionaryUtil.CollectionToDic(System.Collections.ICollection)">
+            <summary>
+            将集合类型生成如 Dictionary[index] = object ,类型的字典
+            </summary>
+            <param name="collection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.DictionaryUtil.ToDictionary(System.Object)">
+            <summary>
+            转化为Dictionary
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Dev.Comm.Utils.FileUtil">
+            <summary>
+              文件帮助方法
+            </summary>
+        </member>
+        <member name="M:Dev.Comm.Utils.FileUtil.IsFile(System.String)">
+            <summary>
+              指向的路径是否是文件及文件是否存在
+            </summary>
+            <param name="path"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.FileUtil.GetFileInfo(System.String)">
+            <summary>
+              取得文件信息
+            </summary>
+            <param name="filepath"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.FileUtil.IsImageFile(System.String)">
+            <summary>
+              是不是图片类型的文件
+            </summary>
+            <param name="path"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.FileUtil.DeleteFile(System.String)">
+            <summary>
+            删除文件
+            </summary>
+            <param name="filepath"></param>
+        </member>
+        <member name="M:Dev.Comm.Utils.FileUtil.FolderCreate(System.String)">
+            <summary>
+              创建图片保存目录
+            </summary>
+            <param name="path"> </param>
+        </member>
+        <member name="M:Dev.Comm.Utils.FileUtil.StreamToBytes(System.IO.Stream)">
+            <summary>
+              将 Stream 转成 byte[]
+            </summary>
+        </member>
+        <member name="M:Dev.Comm.Utils.FileUtil.SaveImageFile(System.Byte[],System.String)">
+            <summary>
+              将二进制流写为图片
+            </summary>
+            <param name="imageByte"> </param>
+            <param name="Path"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.FileUtil.CheckImageExt(System.IO.Stream)">
+            <summary>
+              类型
+            </summary>
+            <param name="stream"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.FileUtil.CheckIsTextFile(System.String)">
+            <summary>
+              判断是否是文本文件
+            </summary>
+            <param name="fileName"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.FileUtil.StreamToFile(System.IO.Stream,System.String)">
+            <summary>
+              将文件传到服务器上临时目录中
+            </summary>
+            <param name="stream"> 文件流 </param>
+            <param name="fileName"> 文件上传的路径 </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.FileUtil.BytesToStream(System.Byte[])">
+            <summary>
+              Byte to Stream
+            </summary>
+            <param name="bytefile"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.FileUtil.Md5Stream(System.String)">
+            <summary>
+            对文件流进行MD5加密
+            </summary>
+            <param name="filePath"></param>
+            <returns></returns>
+            <example></example>
+        </member>
+        <member name="M:Dev.Comm.Utils.FileUtil.Md5Stream(System.IO.FileStream)">
+            <summary>
+            将文件流进行Md5
+            </summary>
+            <param name="fs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.FileUtil.Md5File(System.String)">
+            <summary>
+            对文件进行MD5加密
+            </summary>
+            <param name="filePath"></param>
+        </member>
+        <member name="M:Dev.Comm.Utils.FileUtil.BytesToFile(System.Byte[],System.String)">
+            <summary>
+            
+            </summary>
+            <param name="bytes"></param>
+            <param name="filepath"></param>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="T:Dev.Comm.ImageHelper">
+            <summary>
+              图片帮助方法
+            </summary>
+        </member>
+        <member name="M:Dev.Comm.ImageHelper.GenThumbnail(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+              生成缩略图 静态方法
+            </summary>
+            <param name="pathImageFrom"> 源图的路径(含文件名及扩展名) </param>
+            <param name="pathImageTo"> 生成的缩略图所保存的路径(含文件名及扩展名) 注意：扩展名一定要与生成的缩略图格式相对应 </param>
+            <param name="width"> 欲生成的缩略图 "画布" 的宽度(像素值) </param>
+            <param name="height"> 欲生成的缩略图 "画布" 的高度(像素值) </param>
+        </member>
+        <member name="M:Dev.Comm.ImageHelper.GenThumbnail(System.IO.Stream,System.Int32,System.Int32)">
+            <summary>
+              生成缩略后的流
+              zbw911
+            </summary>
+            <param name="ImageStreamFrom"> </param>
+            <param name="width"> </param>
+            <param name="height"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.ImageHelper.AddBlackBorder(System.Drawing.Bitmap,System.Int32)">
+            <summary>
+              去除黑边
+            </summary>
+            <param name="Img"> </param>
+            <param name="AddPx"> 要添加的黑边宽度 像素 </param>
+        </member>
+        <member name="T:Dev.Comm.JsonConvert">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Dev.Comm.JsonConvert.ToJsonStr``1(``0)">
+            <summary>
+              将对象转成Json格式
+            </summary>
+            <typeparam name="T"> </typeparam>
+            <param name="obj"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.JsonConvert.ToJsonStrDyn(System.Object)">
+            <summary>
+              将动态对象转化为Json 字符串
+            </summary>
+            <param name="obj"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.JsonConvert.ToJsonObject``1(System.String)">
+            <summary>
+              将JSON 字符转换为对象
+            </summary>
+            <typeparam name="T"> </typeparam>
+            <param name="str"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.JsonConvert.ToJsonObject(System.String)">
+            <summary>
+              动态json
+            </summary>
+            <param name="jsonString"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.JsonConvert.ToJsonDynamic(System.String)">
+            <summary>
+              原生生成Json对像
+            </summary>
+            <param name="jsonString"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.JsonConvert.ConvertJsonDateToDateString(System.Text.RegularExpressions.Match)">
+            <summary>
+              将Json序列化的时间由/Date(1294499956278+0800)转为字符串
+            </summary>
+        </member>
+        <member name="M:Dev.Comm.JsonConvert.ConvertDateStringToJsonDate(System.Text.RegularExpressions.Match)">
+            <summary>
+              将时间字符串转为Json时间
+            </summary>
+        </member>
+        <member name="T:Dev.Comm.NetFile.FileHelper">
+            <summary>
+              网络文件帮助方法
+              added by zbw911 2011-4-25
+            </summary>
+        </member>
+        <member name="M:Dev.Comm.NetFile.FileHelper.findFile(System.String)">
+            <summary>
+              取得文件
+            </summary>
+            <param name="dirname"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.NetFile.FileHelper.GetDirectories(System.String)">
+            <summary>
+              取得目录
+            </summary>
+            <param name="dirname"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.NetFile.FileHelper.WriteFile(System.String,System.String,System.Byte[])">
+            <summary>
+              写入指定的文件，如果不存在创建目录并写入文件
+            </summary>
+            <param name="dirname"> </param>
+            <param name="filename"> </param>
+            <param name="fileByte"> </param>
+        </member>
+        <member name="M:Dev.Comm.NetFile.FileHelper.UpdateFile(System.String,System.String,System.Byte[])">
+            <summary>
+              更新指定的文件，如果不存在创建目录并写入文件
+            </summary>
+            <param name="dirname"> </param>
+            <param name="filename"> </param>
+            <param name="fileByte"> </param>
+        </member>
+        <member name="M:Dev.Comm.NetFile.FileHelper.DeleteFile(System.String,System.String)">
+            <summary>
+              删除文件
+            </summary>
+            <param name="dirname"> </param>
+            <param name="filename"> </param>
+        </member>
+        <member name="M:Dev.Comm.NetFile.FileHelper.DeletePath(System.String)">
+            <summary>
+            删除目录
+            </summary>
+            <param name="dirname"></param>
+        </member>
+        <member name="P:Dev.Comm.NetFile.FileHelper.password">
+            <summary>
+              密码
+            </summary>
+        </member>
+        <member name="P:Dev.Comm.NetFile.FileHelper.username">
+            <summary>
+              登录名
+            </summary>
+        </member>
+        <member name="P:Dev.Comm.NetFile.FileHelper.hostIp">
+            <summary>
+              IP
+            </summary>
+        </member>
+        <member name="P:Dev.Comm.NetFile.FileHelper.startdirname">
+            <summary>
+              起始路径
+            </summary>
+        </member>
+        <member name="T:Dev.Comm.Utils.MockUrlCode">
+            <summary>
+              不使用　System.Web.进行ＵＲＬ编码　，　added by zbw911
+            </summary>
+        </member>
+        <member name="M:Dev.Comm.Utils.MockUrlCode.UrlEncode(System.String)">
+            <summary>
+              UrlEndcode
+            </summary>
+            <param name="str"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.MockUrlCode.UrlDecode(System.String)">
+            <summary>
+            UrlDecode
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Dev.Comm.Randoms">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Dev.Comm.Randoms.CreateRandomCode(System.Int32)">
+            <summary>
+              生成随机数
+            </summary>
+            <param name="codeCount"> 随机数个数 </param>
+            <returns> STRING </returns>
+        </member>
+        <member name="M:Dev.Comm.Randoms.CreateRandomNumber(System.Int32)">
+            <summary>
+            </summary>
+            <param name="max"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.Randoms.CreateRandomCode">
+            <summary>
+              生成随机数
+            </summary>
+            <param name="codeCount"> 随机数个数 </param>
+            <returns> STRING </returns>
+        </member>
+        <member name="M:Dev.Comm.Randoms.CreateRandomEleCode">
+            lianyee
+            <summary>
+              生成随机数
+            </summary>
+            <param name="codeCount"> 随机数个数 </param>
+            <returns> STRING </returns>
+        </member>
+        <member name="M:Dev.Comm.RegexHelper.MatchesKeyIndex(System.String,System.String)">
+            <summary>
+            </summary>
+            <param name="content"> </param>
+            <param name="pattern"> </param>
+        </member>
+        <member name="M:Dev.Comm.RegexHelper.MatchesGroupsString(System.String,System.String,System.Int32)">
+            <summary>
+              返回 所有 分组匹配项
+            </summary>
+            <param name="content"> </param>
+            <param name="pattern"> </param>
+            <param name="matchindex"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.RegexHelper.MatchesGroups(System.String,System.String,System.Int32)">
+            <summary>
+            </summary>
+            <param name="content"> </param>
+            <param name="pattern"> </param>
+            <param name="matchindex"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.RegexHelper.PregReplace(System.String,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+             批量正则替换
+            </summary>
+            <param name="source"></param>
+            <param name="patterns"> </param>
+            <param name="replaces"> </param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:Dev.Comm.RegexHelper.GetMatch(System.String,System.String)">
+            <summary>
+            取得匹配结果
+            </summary>
+            <param name="content"></param>
+            <param name="pattern"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dev.Comm.RegexHelper.PregReplace(System.String,System.String,System.String)">
+            <summary>
+              正则替换
+            </summary>
+            <param name="content"> </param>
+            <param name="pattern"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.RegexHelper.MatchAndHandler(System.String,System.String,System.Func{System.String,System.Text.RegularExpressions.GroupCollection,System.String})">
+            <summary>
+            
+            </summary>
+            <param name="source"></param>
+            <param name="macth"></param>
+            <param name="handler"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dev.Comm.RegexHelper.Preg_match(System.String,System.String)">
+            <summary>
+              是否MATCH，兼容php
+            </summary>
+            <param name="content"> </param>
+            <param name="pattern"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.Security.IsSafeSqlString(System.String)">
+            <summary>
+              检测是否有Sql危险字符
+            </summary>
+            <param name="str"> 要判断字符串 </param>
+            <returns> 判断结果 </returns>
+        </member>
+        <member name="M:Dev.Comm.Security.ToBase64Encrypt(System.String)">
+            <summary>
+              base64位加密
+            </summary>
+            <param name="strInput"> 字符串 </param>
+            <returns> STRING </returns>
+        </member>
+        <member name="M:Dev.Comm.Security.FormBase64Encrypt(System.String)">
+            <summary>
+              base64位解密
+            </summary>
+            <param name="strInput"> 字符串 </param>
+            <returns> STRING </returns>
+        </member>
+        <member name="M:Dev.Comm.Security.RSAEncodeForPEM(System.String,System.String)">
+            <summary>
+              RSA 私钥签名 杨栋添加
+            </summary>
+            <param name="str"> 需要加密的原始字符串 </param>
+            <param name="privatefilepath"> 私钥.PEM 文件路径 </param>
+            <returns> 加密后16进制字符串 </returns>
+        </member>
+        <member name="M:Dev.Comm.Security.PemToXml(System.String,System.String)">
+            <summary>
+              PEM 文件 转换成 XML 文件 杨栋添加
+            </summary>
+            <param name="pemstr"> PEM文件原型,包含开始和结尾的注释 </param>
+            <param name="xmlfilepath"> 要保存为 XML文件路径 </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.Security.RSAEncode(System.String,System.String)">
+            <summary>
+              RSA 私钥签名 杨栋添加
+            </summary>
+            <param name="str"> 要签名的原始字符串 </param>
+            <param name="PrivateXmlfilepath"> 私钥xml文件地址 </param>
+            <returns> 签名后字符串 </returns>
+        </member>
+        <member name="M:Dev.Comm.Security.RSACheck(System.String,System.String,System.String)">
+            <summary>
+              RSA 公钥验证 杨栋添加
+            </summary>
+            <param name="RsaEncodeStr"> 私钥加密后字符串 </param>
+            <param name="RsaPublicfilepath"> RSA公钥PEM文件路径 </param>
+            <param name="srcstr"> RSA私钥加密前原始字符串 </param>
+            <returns> 验证结果 true or false </returns>
+        </member>
+        <member name="M:Dev.Comm.Sorter.BubbleSort(System.Int32[])">
+            <summary>
+              冒泡排序法1
+            </summary>
+            <param name="list"> </param>
+        </member>
+        <member name="M:Dev.Comm.Sorter.InsertionSort(System.Int32[])">
+            <summary>
+              插入排序法
+            </summary>
+            <param name="list"> </param>
+        </member>
+        <!-- 对于成员“M:Dev.Comm.Sorter.SelectionSort(System.Int32[])”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“M:Dev.Comm.Sorter.ShellSort(System.Int32[])”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“M:Dev.Comm.Sorter.Sort(System.Int32[],System.Int32,System.Int32)”忽略有格式错误的 XML 注释 -->
+        <member name="M:Dev.Comm.Utils.StringUtil.InputText(System.String,System.Int32)">
+            <summary>
+              对字符串进行有效的HTML转换
+            </summary>
+            <param name="inputString"> 字符串 </param>
+            <param name="maxLength"> 最多长度 </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.StringUtil.AddSlashes(System.String)">
+            <summary>
+              Returns a string with backslashes before characters that need to be quoted
+            </summary>
+            <param name="InputTxt"> Text string need to be escape with slashes </param>
+        </member>
+        <member name="M:Dev.Comm.Utils.StringUtil.StripSlashes(System.String)">
+            <summary>
+              Un-quotes a quoted string
+            </summary>
+            <param name="InputTxt"> Text string need to be escape with slashes </param>
+        </member>
+        <member name="M:Dev.Comm.Utils.StringUtil.ReplaceBat(System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{System.String},System.String)">
+            <summary>
+              批量进行替换
+            </summary>
+            <param name="oldvalue"> </param>
+            <param name="newvalue"> </param>
+            <param name="content"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.StringUtil.ConcatStrs(System.String[],System.String)">
+            <summary>
+              用分隔符连接多个串
+            </summary>
+            <param name="strs"> </param>
+            <param name="spliter"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.StringUtil.CutGBStr(System.String,System.Int32,System.String)">
+            <summary>
+              按字节数截取,并去除半个汉字
+            </summary>
+            <param name="str"> 字符串 </param>
+            <param name="len"> 截取长度 </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.StringUtil.Strip_Tags(System.String)">
+            <summary>
+              去除HTML标记
+            </summary>
+            <param name="AHtml"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.StringUtil.GbStrLength(System.String)">
+            <summary>
+              计算文本长度，区分中英文字符，中文算两个长度，英文算一个长度
+            </summary>
+            <param name="Text"> 需计算长度的字符串 </param>
+            <returns> int </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.StringUtil.SplitString(System.String,System.String,System.Boolean)">
+            <summary>
+              分割字符串
+            </summary>
+        </member>
+        <member name="M:Dev.Comm.Utils.StringUtil.SplitString(System.String,System.String,System.Int32)">
+            <summary>
+              分割字符串
+            </summary>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.StringUtil.StrIsNullOrEmpty(System.String)">
+            <summary>
+              字段串是否为Null或为""(空)
+            </summary>
+            <param name="str"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.StringUtil.isLower(System.Char)">
+            <summary>
+              字符是否小写
+            </summary>
+            <param name="ch"> 字符 </param>
+            <returns> bool </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.StringUtil.isUpper(System.Char)">
+            <summary>
+              字符是否大写
+            </summary>
+            <param name="ch"> 字符 </param>
+            <returns> bool </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.StringUtil.isNumberic(System.Char)">
+            <summary>
+              输入的字符是否是数字
+            </summary>
+            <param name="ch"> 一个字符 </param>
+            <returns> bool </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.StringUtil.isSpecialCharacter(System.Char)">
+            <summary>
+              特殊字符检验
+            </summary>
+            <param name="ch"> 特殊字符 </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.StringUtil.Remove(System.String,System.String)">
+            <summary>
+              从字符串中的尾部删除指定的字符串
+            </summary>
+            <param name="sourceString"> </param>
+            <param name="removedString"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.StringUtil.RightSplit(System.String,System.Char)">
+            <summary>
+              获取拆分符右边的字符串
+            </summary>
+            <param name="sourceString"> </param>
+            <param name="splitChar"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.StringUtil.LeftSplit(System.String,System.Char)">
+            <summary>
+              获取拆分符左边的字符串
+            </summary>
+            <param name="sourceString"> </param>
+            <param name="splitChar"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.StringUtil.DelLastComma(System.String)">
+            <summary>
+              去掉最后一个逗号
+            </summary>
+            <param name="origin"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.StringUtil.DeleteUnVisibleChar(System.String)">
+            <summary>
+              删除不可见字符
+            </summary>
+            <param name="sourceString"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.StringUtil.GetArrayString(System.String[])">
+            <summary>
+              获取数组元素的合并字符串
+            </summary>
+            <param name="stringArray"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.StringUtil.GetStringCount(System.String[],System.String)">
+            <summary>
+              获取某一字符串在字符串数组中出现的次数
+            </summary>
+            <param name="stringArray"> 字符数字 </param>
+            <param name="findString"> 寻找的字符串 </param>
+            <returns> INT </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.StringUtil.GetStringCount(System.String,System.String)">
+            <summary>
+              获取某一字符串在字符串中出现的次数
+            </summary>
+            <param name="stringArray" type="string">
+              <para> 原字符串 </para>
+            </param>
+            <param name="findString" type="string">
+              <para> 匹配字符串 </para>
+            </param>
+            <returns> 匹配字符串数量 </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.StringUtil.GetSubString(System.String,System.String)">
+            <summary>
+              截取从startString开始到原字符串结尾的所有字符
+            </summary>
+            <param name="sourceString" type="string">
+              <para> </para>
+            </param>
+            <param name="startString" type="string">
+              <para> </para>
+            </param>
+            <returns> A string value... </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.StringUtil.GetSubString(System.String,System.String,System.String)">
+            <summary>
+            </summary>
+            <param name="sourceString"> </param>
+            <param name="beginRemovedString"> </param>
+            <param name="endRemovedString"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.StringUtil.GetByteCount(System.String)">
+            <summary>
+              按字节数取出字符串的长度
+            </summary>
+            <param name="strTmp"> 要计算的字符串 </param>
+            <returns> 字符串的字节数 </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.StringUtil.GetByteIndex(System.Int32,System.String)">
+            <summary>
+              按字节数要在字符串的位置
+            </summary>
+            <param name="intIns"> 字符串的位置 </param>
+            <param name="strTmp"> 要计算的字符串 </param>
+            <returns> 字节的位置 </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.StringUtil.RemoveMiddleSpace(System.String)">
+            <summary>
+              去掉字符中的空格
+            </summary>
+            <param name="str"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.StringUtil.DoInc(System.String,System.Int32)">
+            <summary>
+              记算流水号
+            </summary>
+            <param name="strId"> 开始字符串 </param>
+            <param name="i"> 流水位数 </param>
+            <returns> 字符串 </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.StringUtil.IncStr(System.String)">
+            <summary>
+              记算流水号
+            </summary>
+            <param name="strId"> 输入的字符 </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.StringUtil.Mask(System.String,System.Int32,System.Int32,System.Char)">
+            <summary>
+              把字符串中某些字符进行替换
+            </summary>
+            <param name="str"> </param>
+            <param name="from"> </param>
+            <param name="len"> </param>
+            <param name="mask"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.StringUtil.GetColor">
+            <summary>
+              生成随机颜色
+            </summary>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.TypeConverter.StrToBool(System.Object,System.Boolean)">
+            <summary>
+              string型转换为bool型
+            </summary>
+            <param name="strValue"> 要转换的字符串 </param>
+            <param name="defValue"> 缺省值 </param>
+            <returns> 转换后的bool类型结果 </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.TypeConverter.StrToBool(System.String,System.Boolean)">
+            <summary>
+              string型转换为bool型
+            </summary>
+            <param name="strValue"> 要转换的字符串 </param>
+            <param name="defValue"> 缺省值 </param>
+            <returns> 转换后的bool类型结果 </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.TypeConverter.ObjectToInt(System.Object)">
+            <summary>
+              将对象转换为Int32类型
+            </summary>
+            <param name="strValue"> 要转换的字符串 </param>
+            <param name="defValue"> 缺省值 </param>
+            <returns> 转换后的int类型结果 </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.TypeConverter.ObjectToInt(System.Object,System.Int32)">
+            <summary>
+              将对象转换为Int32类型
+            </summary>
+            <param name="strValue"> 要转换的字符串 </param>
+            <param name="defValue"> 缺省值 </param>
+            <returns> 转换后的int类型结果 </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.TypeConverter.StrToInt(System.String)">
+            <summary>
+              将对象转换为Int32类型,转换失败返回0
+            </summary>
+            <param name="str"> 要转换的字符串 </param>
+            <returns> 转换后的int类型结果 </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.TypeConverter.StrToInt(System.String,System.Int32)">
+            <summary>
+              将对象转换为Int32类型
+            </summary>
+            <param name="str"> 要转换的字符串 </param>
+            <param name="defValue"> 缺省值 </param>
+            <returns> 转换后的int类型结果 </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.TypeConverter.StrToFloat(System.Object,System.Single)">
+            <summary>
+              string型转换为float型
+            </summary>
+            <param name="strValue"> 要转换的字符串 </param>
+            <param name="defValue"> 缺省值 </param>
+            <returns> 转换后的int类型结果 </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.TypeConverter.ObjectToFloat(System.Object,System.Single)">
+            <summary>
+              string型转换为float型
+            </summary>
+            <param name="strValue"> 要转换的字符串 </param>
+            <param name="defValue"> 缺省值 </param>
+            <returns> 转换后的int类型结果 </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.TypeConverter.ObjectToFloat(System.Object)">
+            <summary>
+              string型转换为float型
+            </summary>
+            <param name="strValue"> 要转换的字符串 </param>
+            <param name="defValue"> 缺省值 </param>
+            <returns> 转换后的int类型结果 </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.TypeConverter.StrToFloat(System.String)">
+            <summary>
+              string型转换为float型
+            </summary>
+            <param name="strValue"> 要转换的字符串 </param>
+            <returns> 转换后的int类型结果 </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.TypeConverter.StrToFloat(System.String,System.Single)">
+            <summary>
+              string型转换为float型
+            </summary>
+            <param name="strValue"> 要转换的字符串 </param>
+            <param name="defValue"> 缺省值 </param>
+            <returns> 转换后的int类型结果 </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.TypeConverter.StrToDateTime(System.String,System.DateTime)">
+            <summary>
+              将对象转换为日期时间类型
+            </summary>
+            <param name="str"> 要转换的字符串 </param>
+            <param name="defValue"> 缺省值 </param>
+            <returns> 转换后的int类型结果 </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.TypeConverter.StrToDateTime(System.String)">
+            <summary>
+              将对象转换为日期时间类型
+            </summary>
+            <param name="str"> 要转换的字符串 </param>
+            <returns> 转换后的int类型结果 </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.TypeConverter.ObjectToDateTime(System.Object)">
+            <summary>
+              将对象转换为日期时间类型
+            </summary>
+            <param name="obj"> 要转换的对象 </param>
+            <returns> 转换后的int类型结果 </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.TypeConverter.ObjectToDateTime(System.Object,System.DateTime)">
+            <summary>
+              将对象转换为日期时间类型
+            </summary>
+            <param name="obj"> 要转换的对象 </param>
+            <param name="defValue"> 缺省值 </param>
+            <returns> 转换后的int类型结果 </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.TypeConverter.StringToIntArray(System.String)">
+            <summary>
+              字符串转成整型数组
+            </summary>
+            <param name="idList"> 要转换的字符串 </param>
+            <returns> 转换后的int类型结果 </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.TypeConverter.StringToIntArray(System.String,System.Int32)">
+            <summary>
+              字符串转成整型数组
+            </summary>
+            <param name="idList"> 要转换的字符串 </param>
+            <param name="defValue"> 缺省值 </param>
+            <returns> 转换后的int类型结果 </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.TypeConverter.ConvertType``1(System.Object,``0)">
+            <summary>
+              泛型数据类型转换
+            </summary>
+            <typeparam name="T"> 自定义数据类型 </typeparam>
+            <param name="value"> 传入需要转换的值 </param>
+            <param name="defaultValue"> 默认值 </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.TypeConverter.ConvertToT``1(System.Object,``0)">
+            <summary>
+              转换数据类型
+            </summary>
+            <typeparam name="T"> 自定义数据类型 </typeparam>
+            <param name="myvalue"> 传入需要转换的值 </param>
+            <param name="defaultValue"> 默认值 </param>
+            <returns> </returns>
+        </member>
+        <member name="T:Dev.Comm.Utils.W3wpUtil">
+            <summary>
+              W3wp 的摘要说明
+              集合IIS容器的相关操作
+            </summary>
+        </member>
+        <member name="M:Dev.Comm.Utils.W3wpUtil.GetAllW3wp(System.String)">
+            <summary>
+              得到所有IIS应用程序池名字
+            </summary>
+            <param name="input"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.W3wpUtil.GetAppPoolNameByPId(System.Object)">
+            <summary>
+              得到应用程序池的名字 进程ID可以使用此方法获取 System.Diagnostics.Process.GetCurrentProcess().Id
+            </summary>
+            <param name="ProcessId"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.Utils.W3wpUtil.AppPoolControl(System.String,Dev.Comm.Utils.W3wpUtil.AppPollControlOption)">
+            <summary>
+              控制应用程序池开始，停止和回收
+            </summary>
+            <param name="AppPoolName"> </param>
+            <param name="Option"> </param>
+        </member>
+        <member name="F:Dev.Comm.Utils.W3wpUtil.AppPollControlOption.Start">
+            <summary>
+              启动
+            </summary>
+        </member>
+        <member name="F:Dev.Comm.Utils.W3wpUtil.AppPollControlOption.Recycle">
+            <summary>
+              回收
+            </summary>
+        </member>
+        <member name="F:Dev.Comm.Utils.W3wpUtil.AppPollControlOption.Stop">
+            <summary>
+              停止
+            </summary>
+        </member>
+        <member name="T:Dev.Comm.XML.XmlToDynamic">
+            <summary>
+              From :http://www.itdevspace.com/2012/07/parse-xml-to-dynamic-object-in-c.html
+            
+              xml 转化为 Dynamic
+            </summary>
+        </member>
+        <member name="M:Dev.Comm.XML.XmlCompent.GetTable(System.String)">
+            <summary>
+              字符串格式XML转换成HASHTABLE
+            </summary>
+            <param name="XmlFile"> </param>
+            <returns> </returns>
+        </member>
+        <member name="T:Dev.Comm.XML.XMLEntityConvert`1">
+            <summary>
+              实体转换XML，XML转换实体
+            </summary>
+            <typeparam name="T"> </typeparam>
+        </member>
+        <member name="M:Dev.Comm.XML.XMLEntityConvert`1.EntityToXml(`0)">
+            <summary>
+              对象实体转换成xml
+            </summary>
+            <param name="item"> 对象实例 </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.XML.XMLEntityConvert`1.EntityToXml(System.Collections.Generic.IList{`0})">
+            <summary>
+              对象实体转换成xml
+            </summary>
+            <param name="items"> 对象实例集 </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.XML.XMLEntityConvert`1.XmlToEntity(System.String)">
+            <summary>
+              XML转成对象实例
+            </summary>
+            <param name="xml"> xml </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Dev.Comm.XML.XMLEntityConvert`1.XmlToEntityList(System.String)">
+            <summary>
+              XML转成对象实例集
+            </summary>
+            <param name="xml"> xml </param>
+            <returns> </returns>
+        </member>
+        <member name="T:Dev.Comm.XML.XmlHelper">
+            <summary>
+              This class attempts to wrap up some common things
+              we need to do when dealing with Xml and C# classes:
+              Load, Save, Add/Remove Attributes/Elements, et al.
+            </summary>
+        </member>
+        <member name="M:Dev.Comm.XML.XmlHelper.SaveToFile(System.String)">
+            <summary>
+              Save the XML to a target file.
+            </summary>
+        </member>
+        <member name="M:Dev.Comm.XML.XmlHelper.ToString">
+            <summary>
+              返回全部的XML字符串
+              Easy way to get the entire Xml string
+            </summary>
+        </member>
+        <member name="M:Dev.Comm.XML.XmlHelper.LoadXML(System.String,Dev.Comm.XML.XmlHelper.LoadType,System.Text.Encoding)">
+            <summary>
+              从文件或者URL加载XML
+              Easy way to load XML from a file or URL
+            </summary>
+        </member>
+        <member name="M:Dev.Comm.XML.XmlHelper.GetURLContent(System.String,System.Text.Encoding)">
+            <summary>
+              Helper method to get string content from a URL - not necessarily XML, but probably
+            </summary>
+        </member>
+        <member name="M:Dev.Comm.XML.XmlHelper.MoveToRoot">
+            <summary>
+              Helper function if navigation is used to ensure we're at the root node.
+            </summary>
+        </member>
+        <member name="M:Dev.Comm.XML.XmlHelper.GetChildNodesFromCriteria(System.String)">
+            <summary>
+              Gets an ArrayList of XmlNode children using an xPath expression
+            </summary>
+        </member>
+        <member name="M:Dev.Comm.XML.XmlHelper.GetChildNodesFromCriteria(System.Xml.XmlNode,System.String)">
+            <summary>
+              Gets an ArrayList of XmlNode children using an xPath expression
+            </summary>
+        </member>
+        <member name="M:Dev.Comm.XML.XmlHelper.GetFirstChildNodeFromCriteria(System.String)">
+            <summary>
+              Get first child node given an XPath expression
+            </summary>
+        </member>
+        <member name="M:Dev.Comm.XML.XmlHelper.GetAttributeValue(System.Xml.XmlNode,System.String)">
+            <summary>
+              Get the Attribute value from a given XmlNode
+            </summary>
+        </member>
+        <member name="M:Dev.Comm.XML.XmlHelper.GetAttributeInt32Value(System.Xml.XmlNode,System.String)">
+            <summary>
+              Get the Attribute int32 (int) value from a given XmlNode
+            </summary>
+        </member>
+        <member name="M:Dev.Comm.XML.XmlHelper.GetAttributeFloatValue(System.Xml.XmlNode,System.String)">
+            <summary>
+              Get the Attribute floating point/Single value from a given XmlNode
+            </summary>
+        </member>
+        <member name="M:Dev.Comm.XML.XmlHelper.GetAttributeDoubleValue(System.Xml.XmlNode,System.String)">
+            <summary>
+              Get the Attribute double value from a given XmlNode
+            </summary>
+        </member>
+        <member name="M:Dev.Comm.XML.XmlHelper.GetAttributeBooleanValue(System.Xml.XmlNode,System.String)">
+            <summary>
+              Get the Attribute boolean value from a given XmlNode
+            </summary>
+        </member>
+        <member name="M:Dev.Comm.XML.XmlHelper.GetElementValue(System.Xml.XmlNode)">
+            <summary>
+              Get the Element value from a given XmlNode
+            </summary>
+        </member>
+        <member name="M:Dev.Comm.XML.XmlHelper.GetElementInt32Value(System.Xml.XmlNode)">
+            <summary>
+              Get the Element Int32 value from a given XmlNode
+            </summary>
+        </member>
+        <member name="M:Dev.Comm.XML.XmlHelper.GetElementFloatValue(System.Xml.XmlNode)">
+            <summary>
+              Get the Element float/single floating point value from a given XmlNode
+            </summary>
+        </member>
+        <member name="M:Dev.Comm.XML.XmlHelper.GetElementDoubleValue(System.Xml.XmlNode)">
+            <summary>
+              Get the Element Double value from a given XmlNode
+            </summary>
+        </member>
+        <member name="M:Dev.Comm.XML.XmlHelper.GetElementBooleanValue(System.Xml.XmlNode)">
+            <summary>
+              Get the Element Boolean value from a given XmlNode
+            </summary>
+        </member>
+        <member name="M:Dev.Comm.XML.XmlHelper.GetChildElementValue(System.Xml.XmlNode,System.String)">
+            <summary>
+              Get the first Child Element value from a given XmlNode
+            </summary>
+        </member>
+        <member name="M:Dev.Comm.XML.XmlHelper.GetChildElementInt32Value(System.Xml.XmlNode,System.String)">
+            <summary>
+              Get the Child Element int32 value from a given XmlNode and ElementName
+            </summary>
+        </member>
+        <member name="M:Dev.Comm.XML.XmlHelper.GetChildElementFloatValue(System.Xml.XmlNode,System.String)">
+            <summary>
+              Get the Child Element floating point/single value from a given XmlNode and ElementName
+            </summary>
+        </member>
+        <member name="M:Dev.Comm.XML.XmlHelper.GetChildElementDoubleValue(System.Xml.XmlNode,System.String)">
+            <summary>
+              Get the Child Element double value from a given XmlNode and ElementName
+            </summary>
+        </member>
+        <member name="M:Dev.Comm.XML.XmlHelper.GetChildElementBooleanValue(System.Xml.XmlNode,System.String)">
+            <summary>
+              Get the Child Element boolean value from a given XmlNode and ElementName
+            </summary>
+        </member>
+        <member name="M:Dev.Comm.XML.XmlHelper.GetFirstChildXmlNodeFromRoot(System.String)">
+            <summary>
+              Returns the first XmlNode object matching this element name
+              <seealso cref="M:Dev.Comm.XML.XmlHelper.GetFirstChildXmlNode(System.Xml.XmlNode,System.String)"/>
+            </summary>
+        </member>
+        <member name="M:Dev.Comm.XML.XmlHelper.GetFirstChildXmlNode(System.Xml.XmlNode,System.String)">
+            <summary>
+              Returns the first XmlNode object matching this element name 
+              NOTE:  this doesn't seem to work if parent is Root!  Use GetFirstChildXmlNodeFromRoot
+              <seealso cref="M:Dev.Comm.XML.XmlHelper.GetFirstChildXmlNodeFromRoot(System.String)"/>
+            </summary>
+        </member>
+        <member name="M:Dev.Comm.XML.XmlHelper.GetChildNodesFromRoot(System.String)">
+            <summary>
+              Returns an XmlNodeList of child nodes matching this element name
+            </summary>
+        </member>
+        <member name="M:Dev.Comm.XML.XmlHelper.GetRecursiveChildNodesFromParent(System.Xml.XmlNode,System.String)">
+            <summary>
+              Returns an ArrayList (boxed XmlNode objects) of child nodes matching this element name
+              This function is recursive in that it will find ALL the children, even if their in 
+              sub folders (sub child nodes)
+            </summary>
+        </member>
+        <member name="M:Dev.Comm.XML.XmlHelper.CreateNodeElement(System.Xml.XmlNode,System.String,System.String)">
+            <summary>
+              Create an Element under the given parent based on the name and value pair.
+            </summary>
+        </member>
+        <member name="M:Dev.Comm.XML.XmlHelper.CreateNodeElement(System.Xml.XmlNode,System.String,System.String,System.String,System.String)">
+            <summary>
+              Create an Element under the given parent based on the name and value pair.
+            </summary>
+        </member>
+        <member name="M:Dev.Comm.XML.XmlHelper.CreateComment(System.Xml.XmlNode,System.String)">
+            <summary>
+              Creates and adds a comment before the given node.  If root node, or null, 
+              the comment node is Appended to the tree.
+            </summary>
+        </member>
+        <member name="M:Dev.Comm.XML.XmlHelper.DeleteNodeElement(System.Xml.XmlNode)">
+            <summary>
+              Delete an XmlNode from the tree
+            </summary>
+        </member>
+        <member name="M:Dev.Comm.XML.XmlHelper.ModifyNodeElementValue(System.Xml.XmlNode,System.String)">
+            <summary>
+              Modify an XmlNode elment with a new value.
+            </summary>
+        </member>
+        <member name="M:Dev.Comm.XML.XmlHelper.CreateNodeAttribute(System.Xml.XmlElement,System.String,System.String)">
+            <summary>
+              Create a new attribute given an XmlElement (XmlNode) target
+            </summary>
+        </member>
+        <member name="M:Dev.Comm.XML.XmlHelper.DeleteNodeAttribute(System.Xml.XmlNode,System.String)">
+            <summary>
+              Delete an attribute from the given target node.
+            </summary>
+        </member>
+        <member name="M:Dev.Comm.XML.XmlHelper.GenerateSchema(System.String)">
+            <summary>
+              GenerateSchema a schema file from a given target file
+            </summary>
+        </member>
+        <member name="M:Dev.Comm.XML.XmlHelper.GenerateSchemaAsString">
+            <summary>
+              GenerateSchemaAsString based on the currently loaded Xml
+            </summary>
+        </member>
+        <member name="M:Dev.Comm.XML.XmlHelper.ModifyNodeAttributeValue(System.Xml.XmlNode,System.String,System.String)">
+            <summary>
+              Modify an attribute value to a new value
+            </summary>
+        </member>
+        <member name="M:Dev.Comm.XML.XmlHelper.Encode(System.String)">
+            <summary>
+              Internal method used to ensure that HTML and XML tags are encoded within their values
+            </summary>
+        </member>
+        <member name="M:Dev.Comm.XML.XmlHelper.Decode(System.String)">
+            <summary>
+              Internal method used to ensure that HTML and XML tags are decoded for display in other systems
+            </summary>
+        </member>
+        <member name="M:Dev.Comm.XML.XmlHelper.HandleException(System.Exception)">
+            <summary>
+              Internal method used to process errors and exception handling
+            </summary>
+        </member>
+    </members>
+</doc>
