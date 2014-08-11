@@ -61,6 +61,7 @@
     <Reference Include="DotNetOpenAuth.OpenId.RelyingParty">
       <HintPath>..\..\packages\DotNetOpenAuth.OpenId.RelyingParty.4.2.2.13055\lib\net40-full\DotNetOpenAuth.OpenId.RelyingParty.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -73,6 +74,7 @@
     <Reference Include="System.Net.Http.WebRequest, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Microsoft.Net.Http.2.0.20710.0\lib\net40\System.Net.Http.WebRequest.dll</HintPath>
     </Reference>
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -81,6 +83,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Client\DouBanClient.cs" />
+    <Compile Include="Client\GoogleOAuth2Client.cs" />
     <Compile Include="Client\QQClient.cs" />
     <Compile Include="Client\QQModel\Callback.cs" />
     <Compile Include="Client\QQModel\OAuthToken.cs">
@@ -98,6 +101,7 @@
     <Compile Include="Client\SinaModel\User.cs" />
     <Compile Include="DictionaryExtensions.cs" />
     <Compile Include="Client\SinaClient.cs" />
+    <Compile Include="PreApplicationStart.cs" />
     <Compile Include="UrlUtilities.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
